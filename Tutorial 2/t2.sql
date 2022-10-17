@@ -1,6 +1,6 @@
--- DROP TABLE Users_Products;
--- DROP TABLE Users;
--- DROP TABLE Product;
+DROP TABLE Users_Products;
+DROP TABLE Users;
+DROP TABLE Product;
 
 
 create table Users(

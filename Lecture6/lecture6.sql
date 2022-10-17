@@ -50,3 +50,27 @@ WHERE empno = 7369;
 
 SELECT *
 FROM emp_audit;
+
+
+-- Data Integrity Trigger Function
+CREATE
+OR replace FUNCTION log_last_sal_changes()RETURNS TRIGGER AS
+$body$
+BEGIN if
+NEW.sal IS NULL THEN
+    raise EXCEPTION '% sal cannot be null ', OLD.ename;
+END if;
+        if
+NEW.sal IS <0 THEN
+    raise EXCEPTION '% sal cannot be negative ', OLD.ename;
+END if;
+
+if
+NEW.sal <> OLD.sal THEN INSERT INTO emp_audit(empno, ename, sal, changed_on)
+VALUES (OLD.empno, OLD.ename, OLD.sal, now());
+END if;
+RETURN new;
+END;
+$body$
+LANGUAGE plpgsql volatile
+cost 100
