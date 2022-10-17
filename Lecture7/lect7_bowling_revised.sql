@@ -1,3 +1,4 @@
+-- BOWLING ALLEY SCORES
 
 --  Create the frame table;
 CREATE TABLE frame
@@ -30,6 +31,7 @@ CREATE TABLE frame_audit
     new_score    integer
 );
 
+
 -- Create an appropriate Function to write changes on Insert, Update and Delete of the frame table to the frame_audit table;
 CREATE
     OR REPLACE FUNCTION log_update_frame_audit()
@@ -44,42 +46,42 @@ BEGIN
         (TG_OP = 'DELETE') THEN
         INSERT INTO frame_audit
         VALUES ('D', USER, NOW(),
-                OLD.bowler_id,
-                OLD.game_id,
-                OLD.frame_number,
-                OLD.strike,
+                old.bowler_id,
+                old.game_id,
+                old.frame_number,
+                old.strike,
                 NEW.strike,
-                OLD.spare,
+                old.spare,
                 NEW.spare,
-                OLD.score,
+                old.score,
                 NEW.score);
         RETURN old;
     ELSIF
         (TG_OP = 'UPDATE') THEN
         INSERT INTO frame_audit
         VALUES ('U', USER, NOW(),
-                OLD.bowler_id,
-                OLD.game_id,
-                OLD.frame_number,
-                OLD.strike,
+                new.bowler_id,
+                new.game_id,
+                new.frame_number,
+                old.strike,
                 NEW.strike,
-                OLD.spare,
+                old.spare,
                 NEW.spare,
-                OLD.score,
+                old.score,
                 NEW.score);
         RETURN new;
     ELSIF
         (TG_OP = 'INSERT') THEN
         INSERT INTO frame_audit
         VALUES ('I', USER, NOW(),
-                OLD.bowler_id,
-                OLD.game_id,
-                OLD.frame_number,
-                OLD.strike,
+                new.bowler_id,
+                new.game_id,
+                new.frame_number,
+                old.strike,
                 NEW.strike,
-                OLD.spare,
+                old.spare,
                 NEW.spare,
-                OLD.score,
+                old.score,
                 NEW.score);
         RETURN new;
     END IF;
