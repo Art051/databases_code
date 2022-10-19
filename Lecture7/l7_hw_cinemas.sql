@@ -1,5 +1,6 @@
 -- Lecture 7 - Function Parameters - Aims at lecture 3 cinemas tables
 
+-- NOTE: IMPROVE FUNCTION NAMING, THESE ARE FAR TOO LONG, LOOK AT MODEL ANS. FOR BETTER NAMING OF FUNCTIONS!
 
 -- IN Mode Example
 -- The following function finds a film by its id and returns the title of the film:
@@ -198,6 +199,12 @@ BEGIN
     INTO town_name, town_pop
     FROM town
     WHERE p_town_name = townname;
+
+    -- the next 3 lines (if not found section) was missing from my solution
+  if not found then
+     raise 'TownName with name % not found', town_name;
+  end if;
+
 END;
 $$;
 

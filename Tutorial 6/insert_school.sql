@@ -1,0 +1,1 @@
+insert into School (schoolid, schoolname, district, address, phonenumber, email, staffheadmaster) values (NEXTVAL('schoolID_seq'), 'bishopston', 'bishopston', 'The Glebe, Bishopston, Swansea, SA3 3JP, United Kingdom', '01792 234121', '6704069_BishopstonComprehensive@Hwbcymru.net', '1');
