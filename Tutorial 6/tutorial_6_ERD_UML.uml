@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>d34ed25c-de49-41eb-b33c-9b221ef5461a.DATABASE:Tutorial_6</OriginalElement>
+  <nodes>
+    <node x="-65.71257485029935" y="-2.726047904191603">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.staff</node>
+    <node x="-99.5" y="269.2604790419162">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.school</node>
+    <node x="859.4375257870147" y="412.91880662793716">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.subject</node>
+    <node x="434.61077844311376" y="37.10778443113776">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.yeargroup</node>
+    <node x="-71.0" y="610.3651269627577">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.roles</node>
+    <node x="945.8023952095808" y="4.107784431137745">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.student</node>
+    <node x="423.46859078418237" y="488.5956833729602">d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.class</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.staff" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.roles" relationship="REFERENCES">
+      <point x="-123.5" y="0.0" />
+      <point x="-117.0" y="90.2739520958084" />
+      <point x="-117.0" y="648.3651269627577" />
+      <point x="-74.5" y="0.0" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.student" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.yeargroup" relationship="REFERENCES">
+      <point x="-93.50039520958092" y="2.1556886225937433E-4" />
+      <point x="86.50022155688623" y="2.1556886224516347E-4" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.class" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.yeargroup" relationship="REFERENCES">
+      <point x="0.0" y="-92.99999999999994" />
+      <point x="26.857812341068666" y="60.0" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.class" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.staff" relationship="REFERENCES">
+      <point x="-125.56164454039248" y="-66.044966020473" />
+      <point x="312.5916699786406" y="515.5507173524871" />
+      <point x="312.5916699786406" y="75.2739520958084" />
+      <point x="-123.5" y="-15.0" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.class" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.subject" relationship="REFERENCES">
+      <point x="124.5" y="-85.49999999999994" />
+      <point x="-98.00000000000011" y="23.176876745023037" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.student" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.school" relationship="REFERENCES">
+      <point x="0.0" y="93.00000000000001" />
+      <point x="1039.302395209581" y="347.2604790419162" />
+      <point x="103.0" y="-15.0" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.class" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.school" relationship="REFERENCES">
+      <point x="-124.50000000000006" y="-15.0" />
+      <point x="3.5" y="566.5956833729601" />
+      <point x="0.0" y="93.0" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.yeargroup" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.school" relationship="REFERENCES">
+      <point x="0.0" y="60.0" />
+      <point x="521.1107784431138" y="332.2604790419162" />
+      <point x="103.0" y="-30.0" />
+    </edge>
+    <edge source="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.school" target="d34ed25c-de49-41eb-b33c-9b221ef5461a.TABLE:Tutorial_6.public.staff" relationship="REFERENCES">
+      <point x="-15.0" y="-93.0" />
+      <point x="-69.28742514970065" y="93.0" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal Groups" zoom="0.9132388777223863" showDependencies="false" x="462.8024029771457" y="343.73125405369785" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

@@ -1,0 +1,10 @@
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'English', 'Exam',79.05);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'Biology', 'Essay', 61.54);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'Physics', 'Essay', 66.66);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'Chemistry', 'Exam', 77.55);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'Maths', 'Essay', 42.20);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'History', 'Exam', 57.90);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'Religious Studies', 'Essay', 43.10);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'PE', 'Exam', 73.15);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'Geography', 'Exam', 84.87);
+insert into subject (subjectid, topic, assessment, passrate) values (NEXTVAL('subjectID_seq'), 'English', 'Exam', 92.60);
